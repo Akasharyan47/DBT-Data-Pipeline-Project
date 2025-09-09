@@ -1,0 +1,4 @@
+{
+    "dbt.pythonPathOverride": "C:\\Users\\lenovo\\Desktop\\DBT Data Pipeline Project\\.venv\\Scripts\\python.exe",
+    "dbt.perspectiveTheme": "Solarized"
+}
