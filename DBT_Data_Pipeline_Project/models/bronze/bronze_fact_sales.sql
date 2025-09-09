@@ -1,3 +1,10 @@
+{{ config(
+    materialized='view' 
+     
+) }}
+
+
+
 select
   sales_id,
   date_sk,

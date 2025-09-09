@@ -1,0 +1,12 @@
+ 
+
+models:
+  - name:  bronze_dim_date
+    config:
+      materialized: view
+  
+
+  - name:  bronze_dim_product
+    config:
+      materialized: view
+  
