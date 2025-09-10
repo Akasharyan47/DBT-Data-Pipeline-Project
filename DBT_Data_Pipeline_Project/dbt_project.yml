@@ -41,3 +41,8 @@ models:
     gold:
       +materialized: table
       +schema: gold
+
+seeds:
+  DBT_Data_Pipeline_Project:
+    +schema: bronze
+    +quote_columns: false
