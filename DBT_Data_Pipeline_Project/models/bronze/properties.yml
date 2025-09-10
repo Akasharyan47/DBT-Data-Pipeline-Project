@@ -4,9 +4,46 @@ models:
   - name:  bronze_dim_date
     config:
       materialized: view
+      schema: bronze
+
   
 
   - name:  bronze_dim_product
     config:
       materialized: view
-  
+      schema: bronze
+
+  - name:  bronze_dim_store
+    config:
+      materialized: view
+      schema: bronze
+  - name:  bronze_fact_sales
+    column:
+      - name: sales_id
+        tests:
+          - unique
+          - not_null
+      - name: gross_amount
+        data_test:
+         - generic_non_negative:
+           
+          
+
+      
+
+  - name:  bronze_fact_store
+    column:
+      - name: store_sk
+        tests:
+          - unique
+          - not_null
+      - name: country
+        data_tests:
+          - accepted_values: 
+             arguments: 
+               values: [USA,Canada]
+            config:
+              severity: warn
+           
+       
+ 

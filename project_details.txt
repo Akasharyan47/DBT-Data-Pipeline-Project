@@ -1,0 +1,83 @@
+DBT Data Pipeline Project - Project Details
+
+Project Overview:
+The DBT Data Pipeline Project is a data engineering project built using dbt (data build tool) to implement a multi-layered data transformation pipeline. The project is structured with bronze, silver, and gold layers to organize data models progressively from raw to refined data.
+
+Key Project Details:
+- Project Name: DBT_Data_Pipeline_Project
+- Version: 1.0.0
+- Profile: DBT_Data_Pipeline_Project
+- Uses dbt for data transformation with models organized in bronze, silver, and gold layers
+- Uses Databricks as the data warehouse platform
+- Python scripts are used to query the Databricks data warehouse
+- Follows ELT (Extract, Load, Transform) pattern
+
+Technologies Used:
+- dbt (data build tool)
+- Databricks SQL Warehouse
+- Python
+- SQL
+- Poetry for dependency management
+
+Project Structure:
+- models/bronze/ - Raw data layer with dimension and fact tables
+- models/silver/ - Intermediate transformation layer
+- models/gold/ - Final analytics layer
+- models/source/ - Source data definitions
+- analyses/ - Analytical queries
+- tests/ - Test cases
+- seeds/ - Static data files
+- macros/ - Reusable SQL macros
+- snapshots/ - Slowly changing dimension snapshots
+
+Key Files and Components:
+1. dbt_project.yml - Main project configuration file
+2. pyproject.toml - Python project configuration with dependencies
+3. main.py - Simple Python entry point script
+4. query_fact_sales.py - Python script to query fact_sales table from Databricks
+5. models/bronze/bronze_fact_sales.sql - DBT model for fact sales data
+6. models/bronze/bronze_dim_customer.sql - Customer dimension model
+7. models/bronze/bronze_dim_date.sql - Date dimension model
+8. models/bronze/bronze_dim_product.sql - Product dimension model
+9. models/bronze/bronze_dim_store.sql - Store dimension model
+10. models/bronze/bronze_fact_returns.sql - Returns fact model
+11. models/source/schema.yml - Source data schema definitions
+12. models/source/sources.yml - Source data configurations
+
+Data Models:
+- Bronze Layer Models (materialized as views):
+  - bronze_fact_sales: Sales transaction data
+  - bronze_fact_returns: Returns transaction data
+  - bronze_dim_customer: Customer dimension
+  - bronze_dim_date: Date dimension
+  - bronze_dim_product: Product dimension
+  - bronze_dim_store: Store dimension
+
+Python Dependencies:
+- dbt-core>=1.10.11
+- dbt-databricks>=1.10.9
+- dbt-python>=1.10.11
+- python-dotenv>=1.0.0
+
+Databricks Connection Details:
+- Host: dbc-2a213262-2333.cloud.databricks.com
+- HTTP Path: /sql/1.0/warehouses/7d109ca1b01d8933
+- Catalog: dbt_project_dev
+- Schema: default
+
+Skills Demonstrated:
+- Data modeling and transformation using dbt
+- Working with Databricks SQL warehouse
+- Writing SQL models and Python scripts for data querying
+- Organizing data pipelines with layered architecture (bronze, silver, gold)
+- Managing dependencies and environment with pyproject.toml
+- Implementing ELT data pipelines
+- Using dbt for data transformation and modeling
+
+Project Architecture:
+The project follows a medallion architecture with three layers:
+1. Bronze Layer: Raw data ingestion from sources
+2. Silver Layer: Data cleansing and standardization
+3. Gold Layer: Business-ready data for analytics and reporting
+
+This project showcases expertise in modern data engineering practices using dbt and cloud data warehouses like Databricks.
