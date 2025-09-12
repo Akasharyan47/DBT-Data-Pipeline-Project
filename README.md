@@ -5,6 +5,9 @@ This project implements an end-to-end **data pipeline** using **DBT (Data Build 
 
 ---
 
+
+<img width="1908" height="869" alt="Screenshot 2025-09-12 210245" src="https://github.com/user-attachments/assets/d5ef5c1c-8485-4408-9fbf-6e06b1a9b870" />
+
 ## Key Technologies
 - **DBT (Data Build Tool)**: Transformation framework, macros, snapshots, testing  
 - **Databricks**: Cloud data platform for execution  
@@ -45,3 +48,4 @@ DBT_Data_Project_Main/
 1. **Install DBT and dependencies**
 ```bash
 pip install dbt-core dbt-databricks
+
