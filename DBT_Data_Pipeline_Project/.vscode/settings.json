@@ -1,0 +1,6 @@
+{
+  "python.pythonPath": "C:\\Users\\lenovo\\Desktop\\DBT Data Pipeline Project\\.venv\\Scripts\\python.exe",
+  "python.defaultInterpreterPath": "C:\\Users\\lenovo\\Desktop\\DBT Data Pipeline Project\\.venv\\Scripts\\python.exe",
+  "dbt.pythonPath": "C:\\Users\\lenovo\\Desktop\\DBT Data Pipeline Project\\.venv\\Scripts\\python.exe",
+  "dbt.dbtPythonPathOverride": "C:\\Users\\lenovo\\Desktop\\DBT Data Pipeline Project\\.venv\\Scripts\\python.exe"
+}

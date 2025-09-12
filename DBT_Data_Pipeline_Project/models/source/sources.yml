@@ -1,0 +1,128 @@
+version: 2
+
+sources:
+  - name: source
+    database: dbt_dev
+    schema: source
+    tables:
+      - name: fact_sales
+
+        description: "Fact sales table with sales transactions"
+        columns:
+          - name: sales_id
+            description: "Sales transaction ID"
+          - name: date_sk
+            description: "Date surrogate key"
+          - name: product_sk
+            description: "Product surrogate key"
+          - name: customer_sk
+            description: "Customer surrogate key"
+          - name: promotion_sk
+            description: "Promotion surrogate key"
+          - name: quantity
+            description: "Quantity sold"
+          - name: unit_price
+            description: "Unit price of product"
+          - name: gross_amount
+            description: "Gross amount before discount"
+          - name: discount_amount
+            description: "Discount amount"
+          - name: net_amount
+            description: "Net amount after discount"
+          - name: payment_method
+            description: "Payment method used"
+
+
+
+
+
+      - name: dim_date
+
+        description: "Dimension table for dates"
+        columns:
+          - name: date_sk
+            description: "Date surrogate key"
+          - name: full_date
+            description: "Full date in YYYY-MM-DD format"
+          - name: day_of_week
+            description: "Day of the week"
+          - name: month
+            description: "Month of the year"
+          - name: quarter
+            description: "Quarter of the year"
+          - name: year
+            description: "Year"
+
+      - name: dim_product
+
+        description: "Dimension table for products"
+        columns:
+          - name: product_sk
+            description: "Product surrogate key"
+          - name: product_name
+            description: "Name of the product"
+          - name: category
+            description: "Product category"
+          - name: subcategory
+            description: "Product subcategory"
+          - name: brand
+            description: "Brand of the product"
+          - name: price
+            description: "Price of the product"
+
+      - name: dim_customer
+
+        description: "Dimension table for customers"
+        columns:
+          - name: customer_sk
+            description: "Customer surrogate key"
+          - name: first_name
+            description: "Customer's first name"
+          - name: last_name
+            description: "Customer's last name"
+          - name: email
+            description: "Customer's email address"
+          - name: phone_number
+            description: "Customer's phone number"
+          - name: address
+            description: "Customer's address"
+          - name: city
+            description: "City of the customer"
+          - name: state
+            description: "State of the customer"
+          - name: zip_code
+            description: "ZIP code of the customer"
+
+      - name: dim_store
+
+        description: "Dimension table for stores"
+        columns:
+          - name: store_sk
+            description: "store surrogate key"
+          - name: store_name
+            description: "Name of the store"
+          - name: start_date
+            description: "Start date of the store"
+          - name: end_date
+            description: "End date of the store"
+          - name: discount_percentage
+            description: "Discount percentage offered in the store"
+
+
+      - name: fact_returns
+        description: "Fact table for returns"
+        columns:
+          - name: return_id
+            description: "Return transaction ID"
+          - name: sales_id
+            description: "Sales transaction ID associated with the return"
+          - name: return_date_sk
+            description: "Return date surrogate key"
+          - name: product_sk
+            description: "Product surrogate key"
+          - name: customer_sk
+            description: "Customer surrogate key"
+          - name: return_quantity
+            description: "Quantity returned"
+          - name: return_amount
+            description: "Amount refunded for the return"
