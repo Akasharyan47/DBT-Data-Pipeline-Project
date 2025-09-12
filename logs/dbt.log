@@ -96,3 +96,26 @@ Runtime Error
 [0m15:00:07.578410 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEE0B5F5F0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEE2DF9E80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001EEE2923C80>]}
 [0m15:00:07.578410 [debug] [MainThread]: Flushing usage events
 [0m15:00:09.419480 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:04:17.674692 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B57FB3E1B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B57D22B560>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B57DF0F500>]}
+
+
+============================== 13:04:17.683401 | a51b6929-3723-48c4-90bb-d65e8e40e42b ==============================
+[0m13:04:17.683401 [info ] [MainThread]: Running with dbt=1.10.11
+[0m13:04:17.684401 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': 'C:\\Users\\lenovo\\.dbt'}
+[0m13:04:17.740465 [info ] [MainThread]: dbt version: 1.10.11
+[0m13:04:17.741461 [info ] [MainThread]: python version: 3.12.10
+[0m13:04:17.741461 [info ] [MainThread]: python path: C:\Users\lenovo\Desktop\DBT Data Pipeline Project\.venv\Scripts\python.exe
+[0m13:04:17.742461 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m13:04:18.921876 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m13:04:18.922877 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m13:04:18.922877 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m13:04:19.935327 [info ] [MainThread]: Using profiles dir at C:\Users\lenovo\.dbt
+[0m13:04:19.936327 [info ] [MainThread]: Using profiles.yml file at C:\Users\lenovo\.dbt\profiles.yml
+[0m13:04:19.937294 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\lenovo\Desktop\DBT Data Pipeline Project\dbt_project.yml
+[0m13:04:19.937294 [error] [MainThread]: Encountered an error:
+Internal Error
+  Profile should not be None if loading profile completed
+[0m13:04:19.938297 [debug] [MainThread]: Command `dbt debug` failed at 13:04:19.938297 after 2.38 seconds
+[0m13:04:19.939327 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B583B20F20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B581217DD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002B592F22180>]}
+[0m13:04:19.939327 [debug] [MainThread]: Flushing usage events
+[0m13:04:21.627557 [debug] [MainThread]: An error was encountered while trying to flush usage events

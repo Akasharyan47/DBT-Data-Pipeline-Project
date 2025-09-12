@@ -1,25 +1,27 @@
 version: 2
 
-models:
-  - name: fact_sales
-    description: "Model for fact_sales data"
-    columns:
-      - name: sales_id
-        tests:
-          - unique
-          - not_null
-      - name: date_sk
-        tests:
-          - not_null
-      - name: product_sk
-        tests:
-          - not_null
-      - name: customer_sk
-        tests:
-          - not_null
-      - name: quantity
-        tests:
-          - not_null
-      - name: unit_price
-        tests:
-          - not_null
+sources:
+  - name: source
+    tables:
+      - name: fact_sales
+        description: "Source for fact_sales data"
+        columns:
+          - name: sales_id
+            tests:
+              - unique
+              - not_null
+          - name: date_sk
+            tests:
+              - not_null
+          - name: product_sk
+            tests:
+              - not_null
+          - name: customer_sk
+            tests:
+              - not_null
+          - name: quantity
+            tests:
+              - not_null
+          - name: unit_price
+            tests:
+              - not_null

@@ -11,18 +11,31 @@ sources:
         columns:
           - name: sales_id
             description: "Sales transaction ID"
+            tests:
+              - unique
+              - not_null
           - name: date_sk
             description: "Date surrogate key"
+            tests:
+              - not_null
           - name: product_sk
             description: "Product surrogate key"
+            tests:
+              - not_null
           - name: customer_sk
             description: "Customer surrogate key"
+            tests:
+              - not_null
           - name: promotion_sk
             description: "Promotion surrogate key"
           - name: quantity
             description: "Quantity sold"
+            tests:
+              - not_null
           - name: unit_price
             description: "Unit price of product"
+            tests:
+              - not_null
           - name: gross_amount
             description: "Gross amount before discount"
           - name: discount_amount

@@ -1,0 +1,6 @@
+- [ ] Fix duplicate source 'fact_sales' in schema.yml and sources.yml
+- [ ] Populate bronze_dim_product.sql with select * from {{ source('source', 'dim_product') }}
+- [ ] Populate bronze_dim_date.sql with select * from {{ source('source', 'dim_date') }}
+- [ ] Populate bronze_fact_returns.sql with select * from {{ source('source', 'fact_returns') }}
+- [ ] Update properties.yml: change 'bronze_fact_store' to 'bronze_dim_store', add 'bronze_dim_customer' and 'bronze_fact_returns'
+- [ ] Run dbt compile to verify the error is resolved

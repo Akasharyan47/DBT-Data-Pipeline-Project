@@ -17,7 +17,24 @@ models:
     config:
       materialized: view
       schema: bronze
-      
+    column:
+      - name: store_sk
+        data_tests:
+          - unique
+          - not_null
+      - name: country
+        data_tests:
+          - accepted_values:
+             arguments:
+               values: [USA,Canada]
+            config:
+              severity: warn
+
+  - name:  bronze_dim_customer
+    config:
+      materialized: view
+      schema: bronze
+
   - name:  bronze_fact_sales
     column:
       - name: sales_id
@@ -27,24 +44,13 @@ models:
       - name: gross_amount
         data_test:
          - generic_non_negative:
-           
-          
 
-      
 
-  - name:  bronze_fact_store
-    column:
-      - name: store_sk
-        data_tests:
-          - unique
-          - not_null
-      - name: country
-        data_tests:
-          - accepted_values: 
-             arguments: 
-               values: [USA,Canada]
-            config:
-              severity: warn
+
+  - name:  bronze_fact_returns
+    config:
+      materialized: view
+      schema: bronze
            
        
  
