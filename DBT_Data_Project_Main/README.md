@@ -3,6 +3,7 @@ Welcome to your new dbt project!
 
 ## Project Overview
 This project implements an end-to-end **data pipeline** using **DBT (Data Build Tool)** on **Databricks**, following the **Medallion Architecture** (Bronze, Silver, Gold layers). The pipeline is designed for **sales analytics**, demonstrating best practices in data engineering, including modular design, automated testing, incremental loads, snapshots, and documentation.
+<img width="1908" height="869" alt="Screenshot 2025-09-12 210245" src="https://github.com/user-attachments/assets/e8c08eb9-5266-4899-8e92-f341ed35d91d" />
 
 ---
 
